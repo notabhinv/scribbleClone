@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Scribble - Create Room</title>
-</head>
 <body>
 
-    <h2>Create Room</h2>
+    <!-- CREATE -->
+    <div id="createScreen">
+        <h2>Create Room</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <button id="createBtn">Create Room</button>
+    </div>
 
-    <input type="text" id="username" placeholder="Enter username">
-    <button id="createBtn">Create Room</button>
-    <p id="roomDisplay"></p>
+    <!-- JOIN -->
+    <div id="joinScreen">
+        <h2>Join Room</h2>
+        <input type="text" id="joinUsername" placeholder="Enter username">
+        <input type="text" id="joinRoomId" placeholder="Enter Room ID">
+        <button id="joinBtn">Join Room</button>
+    </div>
+
+    <!-- GAME -->
+    <div id="gameScreen" style="display: none;">
+        <h2>Game Room</h2>
+        <p id="roomId"></p>
+        <p id="playerName"></p>
+    </div>
 
     <script src="script.js"></script>
 
 </body>
-</html>
