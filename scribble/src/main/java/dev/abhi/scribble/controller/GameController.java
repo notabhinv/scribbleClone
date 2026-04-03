@@ -30,11 +30,20 @@ public class GameController {
     }
 
     @PostMapping("/{roomID}/join")
-    public Room joinRoom(@RequestBody Player player, @PathVariable String roomID){
-        return gameService.joinRoom(player, roomID);
+    public Map<String, String> joinRoom(@RequestBody Player player, @PathVariable String roomID){
+        Room room = gameService.getRoom(roomID);
+        if (room == null) {
+        throw new RuntimeException("Room not found");
+        }
+
+        gameService.joinRoom(player, roomID);
+        return Map.of(
+            "username",player.getUsername(),
+            "roomId", roomID
+        );
     }
 
-    @GetMapping("/get/{roomID}")
+    @GetMapping("/{roomID}")
     public Room getRoom(@PathVariable String roomID){
         return gameService.getRoom(roomID);
     }

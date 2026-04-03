@@ -36,7 +36,7 @@ joinBtn.addEventListener("click", () => {
         return;
     }
 
-    fetch(`http://localhost:8080/game/join/${roomId}`, {
+    fetch(`http://localhost:8080/game/${roomId}/join`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
