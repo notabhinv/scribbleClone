@@ -50,6 +50,36 @@ joinBtn.addEventListener("click", () => {
     .catch(err => console.error("Error:", err));
 });
 
+//canvas
+const canvas = document.getElementById("board");
+const ctx = canvas.getContext("2d");
+
+let isDrawing = false
+
+canvas.addEventListener("mousedown", (e) => {
+    ctx.lineWidth = 5
+    ctx.strokeStyle = "red"
+
+    ctx.beginPath()
+    ctx.moveTo(e.offsetX, e.offsetY)
+    isDrawing = true
+})
+
+canvas.addEventListener("mousemove", (e) => {
+    if(isDrawing){
+        ctx.lineTo(e.offsetX, e.offsetY)
+        ctx.stroke()
+    }
+})
+
+canvas.addEventListener("mouseup", () => {
+    isDrawing = false
+})
+
+canvas.addEventListener("mouseleave", () => {
+    isDrawing = false
+})
+
 
 function showGameScreen(data) {
     console.log("Response:", data);
