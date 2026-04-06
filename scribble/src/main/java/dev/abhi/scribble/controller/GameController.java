@@ -1,7 +1,7 @@
 package dev.abhi.scribble.controller;
 
-import dev.abhi.scribble.model.Player;
-import dev.abhi.scribble.model.Room;
+import dev.abhi.room.Room;
+import dev.abhi.scribble.player.Player;
 import dev.abhi.scribble.service.GameService;
 
 import java.util.Map;

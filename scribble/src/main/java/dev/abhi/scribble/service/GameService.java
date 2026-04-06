@@ -1,8 +1,10 @@
 package dev.abhi.scribble.service;
 
-import dev.abhi.scribble.model.Player;
-import dev.abhi.scribble.model.Room;
 import org.springframework.stereotype.Service;
+
+import dev.abhi.room.Room;
+import dev.abhi.scribble.player.Player;
+
 import java.util.HashMap;
 
 @Service

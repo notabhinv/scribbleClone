@@ -1,6 +1,5 @@
-package dev.abhi.scribble.model;
+package dev.abhi.scribble.player;
 
 
 public record PlayerDTO(String username, int score) {
-    
 }

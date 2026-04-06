@@ -1,4 +1,4 @@
-package dev.abhi.scribble.model;
+package dev.abhi.scribble.player;
 
 
 import lombok.Getter;

@@ -1,10 +1,12 @@
-package dev.abhi.scribble.model;
+package dev.abhi.room;
 
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import dev.abhi.scribble.player.Player;
 
 @Getter
 public class Room {
