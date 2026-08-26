@@ -1,8 +1,8 @@
 package dev.abhi.scribble.controller;
 
-import dev.abhi.room.Room;
-import dev.abhi.scribble.player.Player;
-import dev.abhi.scribble.service.GameService;
+import dev.abhi.scribble.model.Player;
+import dev.abhi.scribble.model.Room;
+import dev.abhi.scribble.service.RoomService;
 
 import java.util.Map;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/game")
 public class GameController {
 
-    private final GameService gameService;
+    private final RoomService gameService;
 
-    public GameController(GameService gameService) {
+    public GameController(RoomService gameService) {
         this.gameService = gameService;
     }
 

@@ -1,4 +1,4 @@
-package dev.abhi.room;
+package dev.abhi.scribble.model;
 
 import lombok.Getter;
 
@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import dev.abhi.scribble.player.Player;
-
 @Getter
 public class Room {
     private String roomID;
     private List<Player> players;
+    private Player currentTurn;
+    private String currentWord;
 
     public Room() {
         this.roomID = UUID.randomUUID().toString().substring(0,5);

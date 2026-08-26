@@ -2,13 +2,13 @@ package dev.abhi.scribble.service;
 
 import org.springframework.stereotype.Service;
 
-import dev.abhi.room.Room;
-import dev.abhi.scribble.player.Player;
+import dev.abhi.scribble.model.Player;
+import dev.abhi.scribble.model.Room;
 
 import java.util.HashMap;
 
 @Service
-public class GameService {
+public class RoomService {
     HashMap<String, Room> rooms = new HashMap<>();
 
     public Room createRoom(Player host){
